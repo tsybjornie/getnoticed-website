@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Book your signage project consultation - check if your project is approval-ready.">
+    <title>Book Appointment — GetNoticed Signage</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="book-styles.css">
+</head>
+
+<body class="booking-body">
+    <!-- ANNOUNCEMENT BAR -->
+    <div class="announcement-bar" id="announcement-bar">
+        <div class="announcement-content">
+            <p>• From drawings to installation — we manage approval-ready signage for retail, office and exhibition
+                spaces •&nbsp;&nbsp;&nbsp;&nbsp; From drawings to installation — we manage approval-ready signage for
+                retail, office and exhibition spaces •&nbsp;&nbsp;&nbsp;&nbsp; From drawings to installation — we manage
+                approval-ready signage for retail, office and exhibition spaces •&nbsp;&nbsp;&nbsp;&nbsp; From drawings
+                to installation — we manage approval-ready signage for retail, office and exhibition spaces •</p>
+        </div>
+    </div>
+    <!-- WHATSAPP FLOATING BUTTON -->
+    <a href="#" id="whatsapp-float" class="whatsapp-float" aria-label="Contact via WhatsApp">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                fill="currentColor" />
+        </svg>
+    </a>
+
+    <!-- SIMPLE HEADER -->
+    <header class="book-header" id="main-nav">
+        <div class="container">
+            <a href="index.html" class="book-logo">GetNoticed</a>
+        </div>
+    </header>
+
+    <!-- PROGRESS BAR -->
+    <div class="progress-container">
+        <div class="container">
+            <div class="progress-bar">
+                <div class="progress-step active" data-step="1">
+                    <div class="progress-icon">1</div>
+                    <div class="progress-label">Project</div>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step" data-step="2">
+                    <div class="progress-icon">2</div>
+                    <div class="progress-label">Location</div>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step" data-step="3">
+                    <div class="progress-icon">3</div>
+                    <div class="progress-label">Timeline</div>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step" data-step="4">
+                    <div class="progress-icon">4</div>
+                    <div class="progress-label">Scope</div>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step" data-step="5">
+                    <div class="progress-icon">5</div>
+                    <div class="progress-label">Contact</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN BOOKING CONTENT -->
+    <main class="book-main">
+        <div class="container">
+            <div class="book-container">
+
+                <!-- STEP 1: PROJECT TYPE -->
+                <div class="book-step" id="step-1">
+                    <div class="step-header">
+                        <h1 class="step-title">Let's check if your signage is approval-ready</h1>
+                        <p class="step-subtitle">This short booking helps us understand your space, timeline, and
+                            requirements before proceeding.</p>
+                    </div>
+
+                    <div class="step-content">
+                        <h2 class="content-heading">What are you installing?</h2>
+
+                        <div class="card-grid">
+                            <div class="selection-card" data-value="retail">
+                                <h3 class="card-title">Retail / Shopfront</h3>
+                                <p class="card-description">Mall tenant, street-level retail, or F&B outlet</p>
+                            </div>
+
+                            <div class="selection-card" data-value="office">
+                                <h3 class="card-title">Office / Building</h3>
+                                <p class="card-description">Corporate signage, wayfinding, or directory</p>
+                            </div>
+
+                            <div class="selection-card" data-value="exhibition">
+                                <h3 class="card-title">Exhibition / Event</h3>
+                                <p class="card-description">Trade show, pop-up, or temporary installation</p>
+                            </div>
+
+                            <div class="selection-card" data-value="not-sure">
+                                <h3 class="card-title">Not sure yet</h3>
+                                <p class="card-description">Still exploring options</p>
+                            </div>
+                        </div>
+
+                        <div class="alert-message" id="drawing-fee-alert" style="display: none;">
+                            Note: Design & drawing fees may apply.
+                        </div>
+                    </div>
+
+                    <div class="step-actions">
+                        <button class="btn btn-primary btn-next" id="next-1" disabled>Continue</button>
+                    </div>
+                </div>
+
+                <!-- STEP 2: LOCATION -->
+                <div class="book-step" id="step-2" style="display: none;">
+                    <div class="step-header">
+                        <button class="btn-back" id="back-2">← Back</button>
+                        <h2 class="step-title">Location Details</h2>
+                    </div>
+
+                    <div class="step-content">
+                        <div class="form-card">
+                            <div class="form-group">
+                                <label for="building-name">Building Name *</label>
+                                <input type="text" id="building-name" name="building-name"
+                                    placeholder="e.g., Plaza Singapura" required>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="unit-number">Unit Number</label>
+                                    <input type="text" id="unit-number" name="unit-number" placeholder="e.g., #02-12">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="postal-code">Postal Code *</label>
+                                    <input type="text" id="postal-code" name="postal-code" placeholder="e.g., 238839"
+                                        required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="site-photo">Upload Site Photo</label>
+                                <div class="file-upload">
+                                    <input type="file" id="site-photo" name="site-photo" accept="image/*" multiple>
+                                    <div class="file-upload-label">
+                                        <span class="upload-icon">📷</span>
+                                        <span>Click to upload or drag and drop</span>
+                                        <span class="upload-hint">Clear photos help us advise faster.</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="building-contact">Building Management Contact (if available)</label>
+                                <input type="text" id="building-contact" name="building-contact"
+                                    placeholder="Name or phone number">
+                                <small class="form-hint">Helps us coordinate site access faster</small>
+                            </div>
+
+                            <h3 class="content-heading" style="margin-top: 2rem;">Site Access & Approvals</h3>
+
+                            <div class="form-group">
+                                <label for="landlord-approval">Landlord Approval Status *</label>
+                                <select id="landlord-approval" name="landlord-approval" required>
+                                    <option value="">Select status</option>
+                                    <option value="obtained">Approval obtained</option>
+                                    <option value="pending">Pending approval</option>
+                                    <option value="not-required">Not required</option>
+                                    <option value="unsure">Unsure</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="access-restrictions">Site Access Restrictions</label>
+                                <textarea id="access-restrictions" name="access-restrictions" rows="2"
+                                    placeholder="e.g., Must coordinate with building security, restricted hours, access card needed"></textarea>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Existing Signage to Remove? *</label>
+                                    <div class="radio-inline-group">
+                                        <label class="radio-inline">
+                                            <input type="radio" name="existing-signage" value="yes" required>
+                                            <span>Yes</span>
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="existing-signage" value="no">
+                                            <span>No</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Power Supply Needed? *</label>
+                                    <div class="radio-inline-group">
+                                        <label class="radio-inline">
+                                            <input type="radio" name="power-supply" value="yes" required>
+                                            <span>Yes</span>
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="power-supply" value="no">
+                                            <span>No</span>
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="power-supply" value="unsure">
+                                            <span>Unsure</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step-actions">
+                        <button class="btn btn-primary btn-next" id="next-2" disabled>Continue</button>
+                    </div>
+                </div>
+
+                <!-- STEP 3: TIMELINE -->
+                <div class="book-step" id="step-3" style="display: none;">
+                    <div class="step-header">
+                        <button class="btn-back" id="back-3">← Back</button>
+                        <h2 class="step-title">Project Timeline</h2>
+                    </div>
+
+                    <div class="step-content">
+                        <h3 class="content-heading">When do you need this completed?</h3>
+
+                        <div class="radio-group">
+                            <label class="radio-card">
+                                <input type="radio" name="timeline" value="asap" required>
+                                <div class="radio-content">
+                                    <div class="radio-text">
+                                        <div class="radio-title">Urgent (within 2 weeks)</div>
+                                        <div class="radio-description">Accelerated timeline</div>
+                                    </div>
+                                </div>
+                            </label>
+
+                            <label class="radio-card">
+                                <input type="radio" name="timeline" value="2-4-weeks">
+                                <div class="radio-content">
+                                    <div class="radio-text">
+                                        <div class="radio-title">2–4 weeks</div>
+                                        <div class="radio-description">Standard timeline</div>
+                                    </div>
+                                </div>
+                            </label>
+
+                            <label class="radio-card">
+                                <input type="radio" name="timeline" value="1-2-months">
+                                <div class="radio-content">
+                                    <div class="radio-text">
+                                        <div class="radio-title">1–2 months</div>
+                                        <div class="radio-description">Flexible timeline</div>
+                                    </div>
+                                </div>
+                            </label>
+
+                            <label class="radio-card">
+                                <input type="radio" name="timeline" value="planning">
+                                <div class="radio-content">
+                                    <div class="radio-text">
+                                        <div class="radio-title">Just planning</div>
+                                        <div class="radio-description">Gathering information</div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+
+                        <h3 class="content-heading" style="margin-top: 2rem;">Site Visit Preferences</h3>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="visit-date">Preferred Site Visit Date</label>
+                                <input type="date" id="visit-date" name="visit-date">
+                                <small class="form-hint">We'll contact you to confirm availability (2-hour slot + 1hr
+                                    buffer)</small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="visit-time">Preferred Time Slot</label>
+                                <select id="visit-time" name="visit-time">
+                                    <option value="">Select time (if you have preference)</option>
+                                    <option value="9am-12pm">Morning (9am - 12pm)</option>
+                                    <option value="12pm-3pm">Midday (12pm - 3pm)</option>
+                                    <option value="3pm-6pm">Afternoon (3pm - 6pm)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <h3 class="content-heading" style="margin-top: 2rem;">Installation Timing</h3>
+
+                        <div class="form-group">
+                            <label>After-hours or Night Work Required? *</label>
+                            <div class="radio-inline-group">
+                                <label class="radio-inline">
+                                    <input type="radio" name="night-work" value="yes" required>
+                                    <span>Yes</span>
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="night-work" value="no">
+                                    <span>No</span>
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="night-work" value="unsure">
+                                    <span>Unsure</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Weekend or Public Holiday Work Needed? *</label>
+                            <div class="radio-inline-group">
+                                <label class="radio-inline">
+                                    <input type="radio" name="weekend-work" value="yes" required>
+                                    <span>Yes</span>
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="weekend-work" value="no">
+                                    <span>No</span>
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="weekend-work" value="unsure">
+                                    <span>Unsure</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="deadline-date">Hard Deadline (if any)</label>
+                            <input type="date" id="deadline-date" name="deadline-date">
+                            <small class="form-hint">Rush timelines may incur additional charges</small>
+                        </div>
+                    </div>
+
+                    <div class="step-actions">
+                        <button class="btn btn-primary btn-next" id="next-3" disabled>Continue</button>
+                    </div>
+                </div>
+
+                <!-- STEP 4: SCOPE CLARITY -->
+                <div class="book-step" id="step-4" style="display: none;">
+                    <div class="step-header">
+                        <button class="btn-back" id="back-4">← Back</button>
+                        <h2 class="step-title">Scope Clarity</h2>
+                    </div>
+
+                    <div class="step-content">
+                        <h3 class="content-heading">How clear is your scope?</h3>
+
+                        <div class="radio-group">
+                            <label class="radio-card">
+                                <input type="radio" name="scope" value="drawings-ready" required>
+                                <div class="radio-content">
+                                    <div class="radio-text">
+                                        <div class="radio-title">I have drawings/specs ready</div>
+                                        <div class="radio-description">Approved drawings or detailed specifications
+                                        </div>
+                                    </div>
+                                </div>
+                            </label>
+
+                            <label class="radio-card">
+                                <input type="radio" name="scope" value="reference-image">
+                                <div class="radio-content">
+                                    <div class="radio-text">
+                                        <div class="radio-title">I have a reference image</div>
+                                        <div class="radio-description">Photo or design concept to work from</div>
+                                    </div>
+                                </div>
+                            </label>
+
+                            <label class="radio-card">
+                                <input type="radio" name="scope" value="need-drawings">
+                                <div class="radio-content">
+                                    <div class="radio-text">
+                                        <div class="radio-title">I need help with drawings</div>
+                                        <div class="radio-description">Require professional drawings for submission
+                                        </div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+
+                        <div class="fee-notice" id="drawing-fee-notice" style="display: none;">
+                            <div class="fee-content">
+                                <div class="fee-title">Pre-Submission Drawing Fee</div>
+                                <div class="fee-description">Professional drawing fee applies. Fully credited if project
+                                    proceeds.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step-actions">
+                        <button class="btn btn-primary btn-next" id="next-4" disabled>Continue</button>
+                    </div>
+                </div>
+
+                <!-- STEP 5: CONTACT DETAILS -->
+                <div class="book-step" id="step-5" style="display: none;">
+                    <div class="step-header">
+                        <button class="btn-back" id="back-5">← Back</button>
+                        <h2 class="step-title">Contact Details</h2>
+                    </div>
+
+                    <div class="step-content">
+                        <div class="form-card">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="contact-name">Name *</label>
+                                    <input type="text" id="contact-name" name="contact-name" placeholder="Your name"
+                                        required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="company">Company</label>
+                                    <input type="text" id="company" name="company"
+                                        placeholder="Company name (optional)">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="whatsapp">WhatsApp Number *</label>
+                                    <input type="tel" id="whatsapp" name="whatsapp" placeholder="+65 9123 4567"
+                                        required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email">Email *</label>
+                                    <input type="email" id="email" name="email" placeholder="your.email@company.com"
+                                        required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="additional-notes">Additional Notes</label>
+                                <textarea id="additional-notes" name="additional-notes" rows="4"
+                                    placeholder="Any other details that might help us prepare for the consultation..."></textarea>
+                            </div>
+                        </div>
+
+                        <div class="review-summary">
+                            <h3 class="summary-title">Your Project Summary</h3>
+                            <div class="summary-item">
+                                <span class="summary-label">Project Type:</span>
+                                <span class="summary-value" id="summary-project">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">Location:</span>
+                                <span class="summary-value" id="summary-location">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">Timeline:</span>
+                                <span class="summary-value" id="summary-timeline">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">Scope:</span>
+                                <span class="summary-value" id="summary-scope">-</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step-actions">
+                        <button class="btn btn-primary btn-submit" id="submit-booking">Submit Project for
+                            Review</button>
+                        <p class="submit-note">We'll review and contact you within 1 business day.</p>
+                    </div>
+                </div>
+
+                <!-- SUCCESS MESSAGE -->
+                <div class="book-step" id="step-success" style="display: none;">
+                    <div class="success-content">
+                        <div class="success-icon">&#10003;</div>
+                        <h2 class="success-title">Thank you for your submission!</h2>
+                        <p class="success-message">
+                            We've received your project details and will review them shortly.
+                            You'll hear from us within 1 business day.
+                        </p>
+                        <div class="success-actions">
+                            <a href="index.html" class="btn btn-primary">Return to Home</a>
+                            <a href="#" id="whatsapp-success" class="btn btn-secondary">WhatsApp Us Now</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="book.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Compliance-ready signage for retail, office and exhibition spaces. Measurement, drawings, submission, fabrication & installation handled.">
+    <title>GetNoticed Signage — Signage That Gets Approved, Without the Stress</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- ANNOUNCEMENT BAR -->
+    <div class="announcement-bar" id="announcement-bar">
+        <div class="announcement-content">
+            <p>• From drawings to installation — we manage approval-ready signage and visual projects for commercial
+                spaces •&nbsp;&nbsp;&nbsp;&nbsp; From drawings to installation — we manage approval-ready signage and
+                visual projects for commercial spaces •&nbsp;&nbsp;&nbsp;&nbsp; From drawings to installation — we
+                manage approval-ready signage and visual projects for commercial spaces •&nbsp;&nbsp;&nbsp;&nbsp; From
+                drawings to installation — we manage approval-ready signage and visual projects for commercial spaces •
+            </p>
+        </div>
+    </div>
+
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="navbar-content">
+                <!-- Logo -->
+                <a href="#hero" class="navbar-logo">GetNoticed</a>
+
+                <!-- Hamburger Menu (Mobile) -->
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <!-- Navigation Menu -->
+                <div class="navbar-menu" id="navbar-menu">
+                    <a href="services.html" class="nav-link">Services</a>
+                    <a href="approval-process.html" class="nav-link">Approval Process</a>
+                    <a href="faqs.html" class="nav-link">FAQs</a>
+                    <a href="about.html" class="nav-link">About</a>
+                </div>
+
+                <!-- CTA Button -->
+                <button id="nav-cta" class="btn btn-nav-cta" onclick="window.location.href='book.html'">Get a
+                    Quote</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- FLOATING WHATSAPP BUTTON (GLOBAL) -->
+    <a href="#" id="whatsapp-float" class="whatsapp-float" aria-label="Contact via WhatsApp">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                fill="currentColor" />
+        </svg>
+    </a>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero">
+        <div class="hero-fullwidth-image">
+            <img src="images/hero-wayfinding.jpg" alt="Professional wayfinding signage in modern mall"
+                class="hero-bg-image">
+            <div class="hero-overlay">
+                <div class="container">
+                    <div class="hero-content-center">
+                        <h1 class="hero-headline">Signage that gets approved,<br>without the stress.</h1>
+                        <p class="hero-subhead">
+                            We help retail, office and exhibition spaces bring their signage to life
+                            from site measurement and drawings to submission, fabrication and installation.
+                        </p>
+                        <div class="cta-group">
+                            <button id="cta-primary" class="btn btn-primary">
+                                Get a Quote
+                            </button>
+                            <a href="#" id="whatsapp-hero" class="cta-secondary">
+                                OrWhatsApp us
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHAT WE DO STRIP -->
+    <section class="what-we-do" id="what-we-do">
+        <div class="container">
+            <div class="cards-grid">
+                <div class="service-card">
+                    <span class="card-badge">Mall-Ready</span>
+                    <h3 class="card-title">Site Measurement</h3>
+                    <p class="card-description">
+                        Accurate measurements so drawings and submissions don't get rejected.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <span class="card-badge">BCA-Aware</span>
+                    <h3 class="card-title">Approval-Ready Drawings</h3>
+                    <p class="card-description">
+                        Mall-compliant shop drawings prepared for smooth approval.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <span class="card-badge">PE-Friendly</span>
+                    <h3 class="card-title">Fabrication & Installation</h3>
+                    <p class="card-description">
+                        Cleanly produced and professionally installed signage.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES GRID -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <h2 class="section-heading">What we handle</h2>
+            <div class="services-grid">
+                <a href="hoarding-boards-wraps.html" class="service-tile service-tile-link">
+                    <div class="service-tile-image" style="background-image: url('images/hoarding-1.jpg');"></div>
+                    <div class="service-tile-text">Hoarding Boards & Wraps</div>
+                </a>
+                <a href="blade-projecting-signs.html" class="service-tile service-tile-link">
+                    <div class="service-tile-image" style="background-image: url('images/blade-1.jpg');"></div>
+                    <div class="service-tile-text">Blade / Projecting Signs</div>
+                </a>
+                <a href="shopfront-fascia-signage.html" class="service-tile service-tile-link">
+                    <div class="service-tile-image" style="background-image: url('images/shopfront-1.jpg');"></div>
+                    <div class="service-tile-text">Shopfront & Fascia Signage</div>
+                </a>
+                <a href="window-glass-vinyl.html" class="service-tile service-tile-link">
+                    <div class="service-tile-image" style="background-image: url('images/vinyl-1.jpg');"></div>
+                    <div class="service-tile-text">Window & Glass Vinyl</div>
+                </a>
+                <a href="wayfinding-directories.html" class="service-tile service-tile-link">
+                    <div class="service-tile-image" style="background-image: url('images/wayfinding-1.jpg');"></div>
+                    <div class="service-tile-text">Wayfinding & Directories</div>
+                </a>
+                <a href="office-logo-compliance.html" class="service-tile service-tile-link">
+                    <div class="service-tile-image" style="background-image: url('images/office-1.jpg');"></div>
+                    <div class="service-tile-text">Office Logo & Compliance Signage</div>
+                </a>
+                <a href="popup-exhibition.html" class="service-tile service-tile-link">
+                    <div class="service-tile-image" style="background-image: url('images/popup-1.jpg');"></div>
+                    <div class="service-tile-text">Pop-Up & Exhibition Graphics</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="why-choose-section">
+        <div class="container">
+            <h2 class="section-heading">Why Choose GetNoticed?</h2>
+            <p class="why-intro">We don't just make signs — we manage compliance, measurements and approvals that
+                prevent delays, rework and rejection.</p>
+
+            <div class="why-grid">
+                <div class="why-item">
+                    <h3 class="why-title">Approval-First Approach</h3>
+                    <p class="why-description">No production starts until approval is confirmed in writing</p>
+                </div>
+
+                <div class="why-item">
+                    <h3 class="why-title">Full Compliance Management</h3>
+                    <p class="why-description">We handle landlord, URA, BCA, SCDF, and FSSD requirements</p>
+                </div>
+
+                <div class="why-item">
+                    <h3 class="why-title">Shop Drawings Included</h3>
+                    <p class="why-description">Professional submission-ready drawings prepared for every project</p>
+                </div>
+
+                <div class="why-item">
+                    <h3 class="why-title">One Point of Contact</h3>
+                    <p class="why-description">No juggling multiple vendors — we manage the entire process</p>
+                </div>
+            </div>
+
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <div class="stat-number">150+</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Approval-First Policy</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">7 Days</div>
+                    <div class="stat-label">Average Drawing Turnaround</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="section-heading">What Our Clients Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">
+                        "GetNoticed handled our entire shopfront signage from drawings to installation. The approval
+                        process was seamless and they coordinated everything with the mall management. Highly
+                        recommended for retail fit-outs."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-name">Sarah Chen</div>
+                        <div class="author-role">Retail Operations Manager</div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">
+                        "Professional service from start to finish. They understood BCA requirements and prepared all
+                        the necessary documentation for our office signage. No delays, no surprises."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-name">Marcus Tan</div>
+                        <div class="author-role">Facilities Director</div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">
+                        "We needed hoarding graphics for our renovation within a tight deadline. The team delivered
+                        quality work and handled all the compliance requirements without us having to chase."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-name">Jennifer Lim</div>
+                        <div class="author-role">Project Coordinator</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FILTER SECTION (WHO THIS IS FOR / NOT FOR) -->
+    <section class="filter-section" id="filter">
+        <div class="container">
+            <div class="filter-grid">
+                <div class="filter-column filter-for">
+                    <h3 class="filter-title">This is for:</h3>
+                    <ul class="filter-list">
+                        <li class="filter-item filter-yes">
+                            <span class="filter-icon">✔</span>
+                            <span>Mall retail & F&B tenants</span>
+                        </li>
+                        <li class="filter-item filter-yes">
+                            <span class="filter-icon">✔</span>
+                            <span>Office managers & facilities teams</span>
+                        </li>
+                        <li class="filter-item filter-yes">
+                            <span class="filter-icon">✔</span>
+                            <span>Exhibitions, pop-ups & event operators</span>
+                        </li>
+                        <li class="filter-item filter-yes">
+                            <span class="filter-icon">✔</span>
+                            <span>Businesses with confirmed spaces</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="filter-column filter-not">
+                    <h3 class="filter-title">Not for:</h3>
+                    <ul class="filter-list">
+                        <li class="filter-item filter-no">
+                            <span class="filter-icon">✖</span>
+                            <span>Home or DIY projects</span>
+                        </li>
+                        <li class="filter-item filter-no">
+                            <span class="filter-icon">✖</span>
+                            <span>"Just exploring ideas"</span>
+                        </li>
+                        <li class="filter-item filter-no">
+                            <span class="filter-icon">✖</span>
+                            <span>Budget printing enquiries</span>
+                        </li>
+                        <li class="filter-item filter-no">
+                            <span class="filter-icon">✖</span>
+                            <span>Free design requests</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AUTHORITY SECTION -->
+    <section class="authority-section" id="authority">
+        <div class="container">
+            <!-- Centering container for content -->
+            <div class="authority-content-wrapper">
+                <h2 class="section-heading">Why clients choose GetNoticed Signage</h2>
+                <p class="authority-intro">
+                    We don't just fabricate signs. We manage the compliance, measurements
+                    and approvals that prevent delays, rework and rejection.
+                </p>
+
+                <div class="benefits-list-container">
+                    <ul class="benefits-list">
+                        <li>
+                            <span class="check-icon">✓</span>
+                            <span>Mall / landlord requirements reviewed</span>
+                        </li>
+                        <li>
+                            <span class="check-icon">✓</span>
+                            <span>Correct measurements before fabrication</span>
+                        </li>
+                        <li>
+                            <span class="check-icon">✓</span>
+                            <span>Submission-ready shop drawings</span>
+                        </li>
+                        <li>
+                            <span class="check-icon">✓</span>
+                            <span>Approval confirmed before production</span>
+                        </li>
+                        <li>
+                            <span class="check-icon">✓</span>
+                            <span>Installation coordinated to deadline</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS TIMELINE -->
+    <section class="process-section" id="process">
+        <div class="container">
+            <h2 class="section-heading">How It Works</h2>
+            <p class="process-intro">From first contact to installed signage — hassle-free</p>
+
+            <div class="process-flow">
+                <div class="flow-step">
+                    <div class="flow-badge">1</div>
+                    <div class="flow-content">
+                        <h3 class="flow-title">Review Requirements</h3>
+                        <p class="flow-text">We discuss your space type, timeline, and landlord/mall compliance
+                            rules
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flow-arrow">↓</div>
+
+                <div class="flow-step">
+                    <div class="flow-badge">2</div>
+                    <div class="flow-content">
+                        <h3 class="flow-title">Site Measurement</h3>
+                        <p class="flow-text">Once scope is confirmed, we take accurate measurements on-site</p>
+                    </div>
+                </div>
+
+                <div class="flow-arrow">↓</div>
+
+                <div class="flow-step">
+                    <div class="flow-badge">3</div>
+                    <div class="flow-content">
+                        <h3 class="flow-title">Shop Drawings & Submission</h3>
+                        <p class="flow-text">Professional drawings prepared and submitted for approval</p>
+                    </div>
+                </div>
+
+                <div class="flow-arrow">↓</div>
+
+                <div class="flow-step">
+                    <div class="flow-badge">4</div>
+                    <div class="flow-content">
+                        <h3 class="flow-title">Approval Confirmation</h3>
+                        <p class="flow-text">We wait for written approval before starting production</p>
+                    </div>
+                </div>
+
+                <div class="flow-arrow">↓</div>
+
+                <div class="flow-step">
+                    <div class="flow-badge">5</div>
+                    <div class="flow-content">
+                        <h3 class="flow-title">Fabrication & Installation</h3>
+                        <p class="flow-text">Quality fabrication and coordinated installation to your deadline</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEES & TRANSPARENCY -->
+    <section class="fees-section" id="fees">
+        <div class="container">
+            <h2 class="section-heading">Fees & next steps</h2>
+            <div class="fees-content">
+                <p>
+                    Site measurement and submission drawings are professional services
+                    and may be required depending on scope. Fees are deductible upon
+                    confirmation of fabrication.
+                </p>
+                <p>
+                    Pricing is finalised only after requirements and measurements are confirmed.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUALIFICATION FORM -->
+    <section class="form-section" id="qualification-form">
+        <div class="container">
+            <div id="form-container" class="form-container">
+                <h2 class="section-heading">Check if your project is submission-ready</h2>
+
+                <form id="qualification-form-element" class="qualification-form">
+                    <!-- Space Type -->
+                    <div class="form-group">
+                        <label for="space-type">Space type <span class="required">*</span></label>
+                        <select id="space-type" name="space-type" required>
+                            <option value="">Select space type</option>
+                            <option value="mall">Mall</option>
+                            <option value="office">Office</option>
+                            <option value="exhibition">Exhibition / Pop-Up</option>
+                        </select>
+                    </div>
+
+                    <!-- Space Confirmed -->
+                    <div class="form-group">
+                        <label for="space-confirmed">Is your space confirmed? <span class="required">*</span></label>
+                        <select id="space-confirmed" name="space-confirmed" required>
+                            <option value="">Select option</option>
+                            <option value="yes">Yes</option>
+                            <option value="not-yet">Not yet</option>
+                        </select>
+                    </div>
+
+                    <!-- What do you need -->
+                    <div class="form-group">
+                        <label>What do you need? <span class="required">*</span></label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="needs" value="hoarding">
+                                <span>Hoarding</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="needs" value="blade">
+                                <span>Blade / projecting sign</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="needs" value="shopfront">
+                                <span>Shopfront signage</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="needs" value="window">
+                                <span>Window / glass vinyl</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="needs" value="wayfinding">
+                                <span>Wayfinding</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="needs" value="other">
+                                <span>Other</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Target Timeline -->
+                    <div class="form-group">
+                        <label for="timeline">Target timeline <span class="required">*</span></label>
+                        <select id="timeline" name="timeline" required>
+                            <option value="">Select timeline</option>
+                            <option value="2-weeks">Within 2 weeks</option>
+                            <option value="2-4-weeks">2–4 weeks</option>
+                            <option value="1-month-plus">More than 1 month</option>
+                        </select>
+                    </div>
+
+                    <!-- Landlord Requirements -->
+                    <div class="form-group">
+                        <label for="landlord-req">Do you have landlord / mall requirements? <span
+                                class="required">*</span></label>
+                        <select id="landlord-req" name="landlord-req" required>
+                            <option value="">Select option</option>
+                            <option value="yes">Yes</option>
+                            <option value="not-yet">Not yet</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-submit">
+                        Run my project through qualification
+                    </button>
+                </form>
+            </div>
+
+            <!-- THANK YOU MESSAGE (Hidden by default) -->
+            <div id="thank-you-container" class="thank-you-container" style="display: none;">
+                <div class="thank-you-content">
+                    <h2 class="section-heading">Thanks</h2>
+                    <p class="thank-you-message">
+                        If your project is suitable, we'll guide you on the next step
+                        which may include a project review call or site measurement.
+                    </p>
+                    <div class="thank-you-buttons">
+                        <a href="book.html" class="btn btn-primary">
+                            Book a signage project review
+                        </a>
+                        <a href="#" id="whatsapp-thank-you" class="btn btn-secondary">
+                            WhatsApp (Active projects only)
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Left Column -->
+                <div class="footer-left">
+                    <p class="footer-brand">GetNoticed Productions</p>
+                    <p class="footer-tagline">Compliance-first signage execution for retail, office & exhibition spaces.
+                    </p>
+                    <div class="footer-contact-links">
+                        <a href="mailto:hello@getnoticed.sg">Email</a>
+                        <span class="footer-divider">|</span>
+                        <a href="#" id="whatsapp-footer">WhatsApp</a>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="footer-right">
+                    <div class="footer-nav">
+                        <a href="terms.html">Terms of Service</a>
+                        <a href="privacy.html">Privacy Policy</a>
+                        <a href="faqs.html">FAQ</a>
+                    </div>
+                    <p class="footer-copyright">© GetNoticed Productions. All rights reserved.</p>
+                    <p class="footer-disclaimer">Quotations are provided based on confirmed site conditions,
+                        specifications and timelines.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
