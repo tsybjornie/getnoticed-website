@@ -1,0 +1,288 @@
+/* ========================================
+   ABOUT PAGE REVAMP STYLES
+   ======================================== */
+
+/* Reuse animations from timeline.css or define here if standalone */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 
+   FEATURE GRID
+   (What we do differently)
+*/
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-xl);
+}
+
+.feature-card {
+    background: #fff;
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(139, 111, 71, 0.2);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-sm);
+    display: inline-block;
+}
+
+.feature-content h3 {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-md);
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.feature-content p {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    line-height: 1.4;
+}
+
+/* 
+   COMPARISON GRID 
+   (Who we work best with)
+*/
+.comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    max-width: 900px;
+    margin: var(--spacing-xl) auto 0;
+}
+
+.profile-card {
+    background: #fff;
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-xl);
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: var(--shadow-md);
+    transition: transform 0.3s ease;
+}
+
+.profile-card:hover {
+    transform: translateY(-3px);
+}
+
+/* Good Fit Styles */
+.profile-card.match {
+    background: linear-gradient(to bottom right, #fff, #FDFEFD);
+    border-top: 4px solid var(--color-success);
+}
+
+/* Not Fit Styles */
+.profile-card.no-match {
+    background: linear-gradient(to bottom right, #fff, #FAFAFA);
+    border-top: 4px solid var(--color-text-light);
+    /* Grey/Neutral */
+}
+
+/* Header & Badge */
+.profile-header {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.profile-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: var(--spacing-sm);
+}
+
+.profile-badge.match {
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--color-success);
+}
+
+.profile-badge.no-match {
+    background: rgba(107, 114, 128, 0.1);
+    color: var(--color-text-light);
+}
+
+.profile-header h3 {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-lg);
+    color: var(--color-primary);
+}
+
+/* List Styles */
+.profile-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.profile-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: var(--spacing-sm);
+    font-size: var(--font-size-md);
+    color: var(--color-text-secondary);
+}
+
+/* Icons */
+.check-icon {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.check-icon svg {
+    width: 16px;
+    height: 16px;
+    stroke-width: 3px;
+}
+
+.profile-card.match .check-icon {
+    color: var(--color-success);
+    background: rgba(16, 185, 129, 0.1);
+}
+
+.check-icon.box {
+    /* For X icons */
+    color: var(--color-text-light);
+    background: rgba(107, 114, 128, 0.1);
+}
+
+/* Feature Icons (SVG Update) */
+.feature-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    margin-bottom: var(--spacing-sm);
+    background: rgba(139, 111, 71, 0.05);
+    border-radius: 50%;
+    color: var(--color-primary);
+}
+
+.feature-icon svg {
+    width: 32px;
+    height: 32px;
+}
+
+.profile-note {
+    margin-top: var(--spacing-lg);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-light);
+    font-style: italic;
+    text-align: center;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .comparison-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr 1fr;
+        /* 2 col on mobile tablet */
+    }
+}
+
+@media (max-width: 480px) {
+    .feature-grid {
+        grid-template-columns: 1fr;
+        /* 1 col on small mobile */
+    }
+}
+
+/* 
+   APPROACH GRID
+   (Our Approach)
+*/
+.approach-grid-revamp {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-xl);
+}
+
+.approach-card {
+    background: var(--color-surface);
+    /* Light grey/seashell */
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+    text-align: left;
+    position: relative;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.approach-card:hover {
+    border-bottom-color: var(--color-primary);
+    background: #fff;
+    box-shadow: var(--shadow-md);
+    transform: translateY(-3px);
+}
+
+.approach-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: rgba(119, 85, 55, 0.15);
+    font-family: var(--font-heading);
+    margin-bottom: var(--spacing-xs);
+    line-height: 1;
+}
+
+.approach-card h3 {
+    font-size: var(--font-size-md);
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+    font-weight: 700;
+}
+
+.approach-card p {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    line-height: 1.4;
+    margin: 0;
+}
+
+@media (max-width: 900px) {
+    .approach-grid-revamp {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-lg);
+    }
+}
+
+@media (max-width: 600px) {
+    .approach-grid-revamp {
+        grid-template-columns: 1fr;
+    }
+}

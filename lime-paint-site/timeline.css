@@ -1,0 +1,314 @@
+/* ========================================
+   TIMELINE STYLES (Approval Process)
+   ======================================== */
+
+.approval-steps-section {
+    padding: var(--spacing-2xl) 0;
+    background: linear-gradient(to bottom, #fff 0%, var(--color-surface) 100%);
+    overflow-x: hidden;
+    /* Prevent horizontal scroll from animations */
+}
+
+.timeline-container {
+    position: relative;
+    max-width: 900px;
+    margin: var(--spacing-xl) auto 0;
+    padding: var(--spacing-lg) 0;
+}
+
+/* Central Line */
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--color-primary);
+    transform: translateX(-50%);
+    opacity: 0.2;
+}
+
+/* Timeline Step Wrapper */
+.timeline-step {
+    position: relative;
+    width: 50%;
+    padding: 0 var(--spacing-2xl);
+    margin-bottom: var(--spacing-2xl);
+    opacity: 0;
+    /* Hidden initially for animation */
+    pointer-events: none;
+    /* Prevent hover/interaction before visible */
+}
+
+/* Left animated elements */
+.step-left {
+    left: 0;
+    text-align: right;
+    transform: translateX(-30px);
+    /* Start slightly off for slide-in */
+}
+
+/* Right animated elements */
+.step-right {
+    left: 50%;
+    text-align: left;
+    transform: translateX(30px);
+}
+
+/* Visible Animation State */
+.timeline-step.visible {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    pointer-events: auto;
+}
+
+/* The Connector Dot */
+.timeline-step::after {
+    content: '';
+    position: absolute;
+    top: 24px;
+    width: 16px;
+    height: 16px;
+    background: var(--color-primary);
+    border: 4px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px var(--color-primary);
+    z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+.step-left::after {
+    right: -8px;
+    /* Center perfectly on line (2px line + dot center offset) */
+}
+
+.step-right::after {
+    left: -8px;
+}
+
+.timeline-step:hover::after {
+    transform: scale(1.3);
+    background: var(--color-bg-primary);
+    /* Yellow accent on hover */
+}
+
+/* Card Content */
+.timeline-content {
+    background: #fff;
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-step:hover .timeline-content {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Add a little arrow pointing to the dot */
+.timeline-content::before {
+    content: '';
+    position: absolute;
+    top: 28px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.step-left .timeline-content::before {
+    right: -10px;
+    border-width: 10px 0 10px 12px;
+    border-color: transparent transparent transparent #fff;
+}
+
+.step-right .timeline-content::before {
+    left: -10px;
+    border-width: 10px 12px 10px 0;
+    border-color: transparent #fff transparent transparent;
+}
+
+/* Numbers */
+.timeline-number {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    color: rgba(119, 85, 55, 0.1);
+    /* Very subtle primary color */
+    font-weight: 700;
+    position: absolute;
+    top: 10px;
+    line-height: 1;
+}
+
+.step-left .timeline-number {
+    right: 20px;
+}
+
+.step-right .timeline-number {
+    left: 20px;
+}
+
+/* Title & Text */
+.timeline-title {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-lg);
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+    position: relative;
+    z-index: 1;
+}
+
+.timeline-description {
+    font-size: var(--font-size-md);
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+}
+
+/* ========================================
+   MOBILE RESPONSIVENESS
+   ======================================== */
+@media (max-width: 768px) {
+    .timeline-line {
+        left: 20px;
+        /* Line hugging left side */
+    }
+
+    .timeline-step {
+        width: 100%;
+        padding-left: 50px;
+        /* Space for line */
+        padding-right: 0;
+        margin-bottom: var(--spacing-xl);
+        text-align: left;
+        /* Always left align on mobile */
+    }
+
+    /* Reset positioning for mobile stack */
+    .step-left,
+    .step-right {
+        left: 0;
+        transform: translateY(20px);
+        /* Animate up instead of side */
+    }
+
+    /* Reset dots to left */
+    .step-left::after,
+    .step-right::after {
+        left: 12px;
+        right: auto;
+    }
+
+    /* Reset arrows */
+    .step-left .timeline-content::before,
+    .step-right .timeline-content::before {
+        left: -10px;
+        right: auto;
+        border-width: 10px 12px 10px 0;
+        border-color: transparent #fff transparent transparent;
+    }
+
+    /* Reset number position */
+    .step-left .timeline-number,
+    .step-right .timeline-number {
+        left: unset;
+        right: 20px;
+        /* Keep number top-right for card consistency */
+    }
+
+    .timeline-content {
+        padding: var(--spacing-md);
+    }
+}
+
+/* ========================================
+   IMPORTANT NOTES (Memo Style)
+   ======================================== */
+
+.approval-notes-section {
+    padding: var(--spacing-xl) 0;
+    background: #fff;
+    text-align: center;
+}
+
+.notes-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #FEFCF5;
+    /* Very light yellow warmth */
+    border: 1px solid rgba(139, 111, 71, 0.2);
+    /* Brand border */
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-sm);
+    box-shadow:
+        0 1px 1px rgba(0, 0, 0, 0.05),
+        0 4px 6px rgba(0, 0, 0, 0.02);
+    position: relative;
+    text-align: left;
+}
+
+/* "Top Secret" / "Memo" vibe */
+.notes-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: rgba(139, 111, 71, 0.2);
+    /* Tape/Clip visual */
+    border-radius: 0 0 4px 4px;
+}
+
+.notes-title {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-lg);
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.notes-title::before {
+    content: 'ⓘ';
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background: var(--color-primary);
+    color: #fff;
+    border-radius: 50%;
+    font-size: 14px;
+    font-style: normal;
+}
+
+.notes-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.notes-item {
+    font-size: var(--font-size-md);
+    color: var(--color-text-secondary);
+    padding: var(--spacing-sm) 0;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 12px;
+}
+
+.notes-item:last-child {
+    border-bottom: none;
+}
+
+.notes-item::before {
+    content: '→';
+    color: var(--color-accent);
+}

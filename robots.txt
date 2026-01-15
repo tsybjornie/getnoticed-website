@@ -1,0 +1,19 @@
+# Robots.txt for GetNoticed Signage
+# This file controls how search engines crawl your website
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://getnoticed.sg/sitemap.xml
+
+# Block access to admin or sensitive directories (if any)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Allow all CSS and JavaScript files for proper rendering
+Allow: /*.css
+Allow: /*.js
+
+# Crawl-delay (optional, only if needed to prevent server overload)
+# Crawl-delay: 1
