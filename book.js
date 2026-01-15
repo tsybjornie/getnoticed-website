@@ -249,21 +249,148 @@ submitBtn.addEventListener('click', (e) => {
         notes: document.getElementById('additional-notes').value
     };
 
-    // Log form data (in production, send to backend)
+    // Collect all additional form data
+    const additionalData = {
+        unitNumber: document.getElementById('unit-number').value,
+        postalCode: document.getElementById('postal-code').value,
+        buildingContact: document.getElementById('building-contact').value,
+        landlordApproval: document.getElementById('landlord-approval').value,
+        accessRestrictions: document.getElementById('access-restrictions').value,
+        existingSignage: document.querySelector('input[name="existing-signage"]:checked')?.value || 'Not specified',
+        powerSupply: document.querySelector('input[name="power-supply"]:checked')?.value || 'Not specified',
+        visitDate: document.getElementById('visit-date').value,
+        visitTime: document.getElementById('visit-time').value,
+        nightWork: document.querySelector('input[name="night-work"]:checked')?.value || 'Not specified',
+        weekendWork: document.querySelector('input[name="weekend-work"]:checked')?.value || 'Not specified',
+        deadlineDate: document.getElementById('deadline-date').value
+    };
+
+    // Log form data
     console.log('Form submitted:', formState);
 
-    // TODO: Send to backend API
-    // fetch('/api/bookings', {
-    //     method: 'POST',
-    //     headers: { 'Content-Type': 'application/json' },
-    //     body: JSON.stringify(formState)
-    // });
+    // Format WhatsApp message
+    const whatsappMessage = formatBookingForWhatsApp(formState, additionalData);
+
+    // Open WhatsApp with formatted message
+    const whatsappUrl = `https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+    window.open(whatsappUrl, '_blank');
 
     // Show success message
     showStep('success');
 });
 
 backBtn5.addEventListener('click', prevStep);
+
+// ========================================
+// FORMAT WHATSAPP MESSAGE
+// ========================================
+
+function formatBookingForWhatsApp(formState, additionalData) {
+    const projectLabels = {
+        'retail': 'Retail / Shopfront',
+        'office': 'Office / Building',
+        'exhibition': 'Exhibition / Event',
+        'not-sure': 'Not sure yet'
+    };
+
+    const timelineLabels = {
+        'asap': 'Urgent (within 2 weeks)',
+        '2-4-weeks': '2–4 weeks',
+        '1-2-months': '1–2 months',
+        'planning': 'Just planning'
+    };
+
+    const scopeLabels = {
+        'drawings-ready': 'I have drawings/specs ready',
+        'reference-image': 'I have a reference image',
+        'need-drawings': 'I need help with drawings'
+    };
+
+    const landlordLabels = {
+        'obtained': 'Approval obtained',
+        'pending': 'Pending approval',
+        'not-required': 'Not required',
+        'unsure': 'Unsure'
+    };
+
+    let message = `🏢 *NEW SIGNAGE BOOKING REQUEST*\n\n`;
+
+    // Contact Information
+    message += `👤 *CONTACT DETAILS*\n`;
+    message += `Name: ${formState.contact.name}\n`;
+    if (formState.contact.company) {
+        message += `Company: ${formState.contact.company}\n`;
+    }
+    message += `WhatsApp: ${formState.contact.whatsapp}\n`;
+    message += `Email: ${formState.contact.email}\n\n`;
+
+    // Project Type
+    message += `📋 *PROJECT TYPE*\n`;
+    message += `${projectLabels[formState.projectType] || formState.projectType}\n\n`;
+
+    // Location Details
+    message += `📍 *LOCATION*\n`;
+    message += `Building: ${formState.location.building}\n`;
+    if (additionalData.unitNumber) {
+        message += `Unit: ${additionalData.unitNumber}\n`;
+    }
+    message += `Postal Code: ${additionalData.postalCode}\n`;
+    if (additionalData.buildingContact) {
+        message += `Building Contact: ${additionalData.buildingContact}\n`;
+    }
+    message += `\n`;
+
+    // Site Access & Approvals
+    message += `🔐 *SITE ACCESS & APPROVALS*\n`;
+    message += `Landlord Approval: ${landlordLabels[additionalData.landlordApproval] || additionalData.landlordApproval}\n`;
+    message += `Existing Signage to Remove: ${additionalData.existingSignage}\n`;
+    message += `Power Supply Needed: ${additionalData.powerSupply}\n`;
+    if (additionalData.accessRestrictions) {
+        message += `Access Restrictions: ${additionalData.accessRestrictions}\n`;
+    }
+    message += `\n`;
+
+    // Timeline
+    message += `⏰ *TIMELINE*\n`;
+    message += `Completion: ${timelineLabels[formState.timeline] || formState.timeline}\n`;
+    if (additionalData.deadlineDate) {
+        message += `Hard Deadline: ${additionalData.deadlineDate}\n`;
+    }
+    message += `After-hours Work: ${additionalData.nightWork}\n`;
+    message += `Weekend Work: ${additionalData.weekendWork}\n`;
+    message += `\n`;
+
+    // Site Visit Preferences
+    if (additionalData.visitDate || additionalData.visitTime) {
+        message += `📅 *SITE VISIT PREFERENCES*\n`;
+        if (additionalData.visitDate) {
+            message += `Preferred Date: ${additionalData.visitDate}\n`;
+        }
+        if (additionalData.visitTime) {
+            message += `Preferred Time: ${additionalData.visitTime}\n`;
+        }
+        message += `\n`;
+    }
+
+    // Scope
+    message += `🎯 *SCOPE*\n`;
+    message += `${scopeLabels[formState.scope] || formState.scope}\n`;
+    if (formState.needsDrawings) {
+        message += `⚠️ Drawing assistance required\n`;
+    }
+    message += `\n`;
+
+    // Additional Notes
+    if (formState.contact.notes) {
+        message += `📝 *ADDITIONAL NOTES*\n`;
+        message += `${formState.contact.notes}\n\n`;
+    }
+
+    message += `---\n`;
+    message += `Submitted via GetNoticed Booking Form`;
+
+    return message;
+}
 
 // ========================================
 // SUCCESS PAGE
